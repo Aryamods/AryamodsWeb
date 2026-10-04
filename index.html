@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AryamodsHQ</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            overflow: hidden;
+        }
+
+        /* DIALOG LED EFFECT */
+        .dialog {
+            width: 340px;
+            background: #111;
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+
+            animation:
+                ledBlink 4s infinite alternate;
+        }
+
+        /* RED + WHITE GLOW */
+        .dialog::before {
+            content: "";
+            position: absolute;
+            inset: -15px;
+            z-index: -1;
+            border-radius: 40px;
+
+            background: linear-gradient(
+                90deg,
+                #7f1d1d,
+                #dc2626,
+                #ffffff,
+                #dc2626,
+                #7f1d1d
+            );
+
+            background-size: 400%;
+
+            filter: blur(35px);
+
+            animation:
+                rgbMove 6s linear infinite;
+        }
+
+        /* BANNER */
+        .banner {
+            height: 190px;
+
+            background: url(
+                'https://files.catbox.moe/r2rmbz.jpg'
+            ) center/cover;
+
+            position: relative;
+        }
+
+        .banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(
+                transparent,
+                rgba(17, 17, 17, .95)
+            );
+        }
+
+        /* CONTENT */
+        .content {
+            padding: 22px;
+            color: #fff;
+        }
+
+        /* BADGE */
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: #B91C1C;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+
+            box-shadow:
+                0 0 7px rgba(220, 38, 38, .85),
+                0 0 16px rgba(220, 38, 38, .55),
+                0 0 28px rgba(220, 38, 38, .25);
+        }
+
+        /* TITLE */
+        .title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            text-shadow:
+                0 0 6px rgba(255, 255, 255, .35),
+                0 0 14px rgba(220, 38, 38, .25);
+        }
+
+        /* VERIFIED IMAGE */
+        .verified {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            flex-shrink: 0;
+
+            filter:
+                drop-shadow(0 0 4px rgba(29, 161, 242, .9))
+                drop-shadow(0 0 9px rgba(29, 161, 242, .55));
+        }
+
+        /* DESCRIPTION */
+        .desc {
+            color: #bdbdbd;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        /* BUTTONS */
+        .btn {
+            width: 100%;
+            height: 54px;
+            border: none;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        /* JOIN NOW */
+        .watch {
+            background: #DC2626;
+            color: #fff;
+
+            box-shadow:
+                0 0 7px rgba(220, 38, 38, .55),
+                0 0 16px rgba(220, 38, 38, .25);
+
+            text-shadow:
+                0 0 5px rgba(255, 255, 255, .75),
+                0 0 10px rgba(255, 255, 255, .35);
+        }
+
+        /* MAYBE LATER */
+        .close {
+            margin-top: 12px;
+            background: #222;
+            color: #ddd;
+
+            box-shadow:
+                0 0 6px rgba(255, 255, 255, .12),
+                0 0 14px rgba(255, 255, 255, .06);
+
+            text-shadow:
+                0 0 5px rgba(255, 255, 255, .45),
+                0 0 10px rgba(255, 255, 255, .18);
+        }
+
+        .btn:active {
+            transform: scale(.97);
+        }
+
+        /* RED + WHITE GLOW MOVE */
+        @keyframes rgbMove {
+
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+
+        }
+
+        /* RED LED BLINK */
+        @keyframes ledBlink {
+
+            0% {
+                box-shadow:
+                    0 0 10px #8B0000,
+                    0 0 20px #B91C1C,
+                    0 0 35px #DC2626;
+            }
+
+            50% {
+                box-shadow:
+                    0 0 15px #DC2626,
+                    0 0 30px #EF4444,
+                    0 0 50px #8B0000;
+            }
+
+            100% {
+                box-shadow:
+                    0 0 20px #B91C1C,
+                    0 0 40px #DC2626,
+                    0 0 60px #7F1D1D;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="dialog">
+
+        <div class="banner"></div>
+
+        <div class="content">
+
+            <div class="badge">
+                CRACK
+            </div>
+
+            <div class="title">
+                AryamodsHQ
+
+                <img
+                    class="verified"
+                    src="https://files.catbox.moe/4uuwnn.png"
+                    alt="Verified"
+                >
+            </div>
+
+            <div class="desc">
+                THIS APK CRACK BY ARYAMODSHQ JOIN TELEGRAM CHANNEL FOR MORE CRACK APKS.
+            </div>
+
+            <button
+                class="btn watch"
+                onclick="openVip()">
+                Join Now
+            </button>
+
+            <button
+                class="btn close"
+                onclick="closeDialog()">
+                Maybe Later
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function openVip() {
+            window.open(
+                "https://t.me/AryamodsHQ",
+                "_blank"
+            );
+        }
+
+        function closeDialog() {
+            window.location.href = "action://close";
+        }
+
+    </script>
+
+</body>
+
+</html>
